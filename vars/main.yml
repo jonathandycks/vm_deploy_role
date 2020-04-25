@@ -1,0 +1,16 @@
+# # Infrastructure
+# - Defines the vCenter / vSphere environment
+vcenter_name: '10.10.20.10'
+vcenter_user: 'administrator@vsphere.local'
+vcenter_pass: 'G00m-WOW'
+vcenter_datacenter: 'DCO-Datacenter'
+vcenter_cluster: 'DCO-Cluster'
+vcenter_folder: '/Ansible/Deployments/Domain Services/Splunk'
+
+# Guest
+# - Describes virtual machine common options
+vm_network_name: 'VM Internal Network'
+vm_network_netmask: '255.255.255.0'
+vm_network_gateway: '10.10.1.1'
+vm_network_dns1: '1.1.1.1'
+vcenter_template: 'CentOS 7 - Master Template'

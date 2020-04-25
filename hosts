@@ -1,0 +1,16 @@
+[splunk_sh_deployer]
+splunk-deployer guest_custom_ip='10.10.20.70' guest_notes='Splunk_Deployer' ansible_host='10.10.20.70'
+
+[splunk_search_cluster]
+splunk-sh-001 guest_custom_ip='10.10.20.71' guest_notes='Splunk_Search_Head_001' ansible_host='10.10.20.71'
+splunk-sh-002 guest_custom_ip='10.10.20.72' guest_notes='Splunk_Search_Head_002' ansible_host='10.10.20.72'
+splunk-sh-003 guest_custom_ip='10.10.20.73' guest_notes='Splunk_Search_Head_003' ansible_host='10.10.20.73'
+
+[splunk_indexer_cluster_master]
+splunk-in-cl-master guest_custom_ip='10.10.20.80' guest_notes='Splunk_Index_Cluster_Master' ansible_host='10.10.20.80'
+
+[splunk_indexer_cluster]
+splunk-in-001 guest_custom_ip='10.10.20.81' guest_notes='Splunk_Indexer_001' ansible_host='10.10.20.81'
+splunk-in-002 guest_custom_ip='10.10.20.82' guest_notes='Splunk_Indexer_002' ansible_host='10.10.20.82'
+splunk-in-003 guest_custom_ip='10.10.20.83' guest_notes='Splunk_Indexer_003' ansible_host='10.10.20.83'
+

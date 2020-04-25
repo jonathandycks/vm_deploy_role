@@ -1,0 +1,26 @@
+---
+# Deploy a VM from a template using Ansible 'vmware_guest' module
+- name: Deploy VM from template
+  vmware_guest:
+    hostname: '{{ vcenter_name }}'
+    username: '{{ vcenter_user }}'
+    password: '{{ vcenter_pass }}'
+    validate_certs: no
+    datacenter: '{{ vcenter_datacenter }}'
+    cluster: '{{ vcenter_cluster }}'
+    folder: '{{ vcenter_folder }}'
+    name: '{{ inventory_hostname }}'
+    annotation: "{{ guest_notes }}"
+    networks:
+    - name: '{{ vm_network_name }}'
+      ip: '{{ guest_custom_ip }}'
+      netmask: '{{ vm_network_netmask }}'
+      gateway: '{{ vm_network_gateway }}'
+      dns_servers:
+      - '{{ vm_network_dns1 }}'
+    customization:
+      hostname: '{{ inventory_hostname }}'
+    template: '{{ vcenter_template }}'
+    wait_for_ip_address: no
+    state: poweredon
+  delegate_to: localhost
